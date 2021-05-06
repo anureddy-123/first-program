@@ -1,0 +1,354 @@
+1->       Compilation problem
+2->       C: Break statement
+3->       Runtime exception
+4->       Multiple 
+5->       Encapsulation
+6->       d: compile error
+7->       C: Singleto class
+8->       C:  12
+9->       7
+10->      truefalsetruetrue
+11->     1: compilation fails
+12->      compilation error
+13->       A: 20
+14->      B
+15->     
+
+
+
+16->           What is overloading and overriding in java? 
+                        
+
+                       Overloading:   Developing multiple methods with same method name but with different arguments list is called"method Overloading"
+                                    arguments list can be differ in 3 ways
+                                      Between the methods type of arguments should be different 
+                                      Between the methods, number of arguments should be different
+                                      Between the methods, position of argument type sholud be different
+                                  By using method overloading when we want to perform same operation in multiple ways
+                          method overloading depends only on two factors
+                          1.method  name should be same
+                          2.Arguments list should be different.
+
+
+
+                           Example:                                
+       public class  Methodoverload {
+	
+	public static void add(int a ,int b ) {
+		System.out.println(a+b);
+	}
+	public static void add(int a , double b ) {
+		System.out.println(a+b);
+	}
+	public static void add(double a , double b, int c ) {
+		System.out.println(a+b+c);
+	}
+	public static void main(String[] args) {
+		add(10,20);
+		add(20,3.4);
+		add(20.2,2.4,43);
+	}
+	
+
+}
+
+
+
+                               Overriding: If a subclass provides the specific implementation of the method that has been declared by one of its super class, it is known as method overriding. 
+
+                                           Method overriding is used for runtime polymorphism.
+                                           subclass method name will be same as super class method name
+                                           arguments list of super class method will be same as subclass method argument list
+                                           there must be IS-A relationship between two classes.
+
+
+                                     Example:    public class  Test {
+	
+
+	  public void find(){
+		  System.out.println("hello");}  
+	}  
+	 
+	class Sample extends Test{  
+	   
+	  public void find() {
+		  System.out.println("Hi");}  
+	  
+	  public static void main(String args[]){  
+		  Sample obj = new Sample(); 
+	  obj.find();
+	  }  
+
+}
+
+
+
+
+
+17->               Can we have multiple public classes in a java source file?
+
+
+                    No,defining multiple classes in a single Java file you need to make sure that only one class among them is public. 
+                    If you have more than one public classes, compiletime error will be displayed.
+
+18->
+                          Write difference between static and non-static variable and methods?
+
+
+
+                              static variable: 
+                                                     A static variable can be accessed by static members as well as
+                                                     non-static member functions.
+                                                     Static variables occupies less space and memory allocation happens once.
+                                                     A static variable is declared using static keyword.
+                              
+
+                             Non-static variable:
+
+
+                                                    A non-static variable can not be accessed by static member functions.
+                                                    A non-static variable may occupy more space. Memory allocation may happen at run time.
+                                                  
+                           Local Variables:         A variable defined within a block or method or constructor is called local variable.
+                          
+                            
+                           Instance Variables:      Instance variables are non-static variables and are declared in a class outside any method, constructor or block.
+
+
+
+                            static and non static methods
+                                           
+                            static method
+
+
+                                         A static method can access only static members and can not access non-static members
+                                         Static method uses complie time binding or early binding.
+                                         A static method cannot be overridden being compile time binding 
+                                         A static method is declared using static keyword.
+                                         Static method occupies less space and memory allocation happens once.
+
+
+                           Non-static method
+                                              A non-static method can access both static as well as non-static members.
+                                              Non-static method uses run time binding or dynamic binding.
+                                              A non-static method can be overridden
+                                              A non-static method may occupy more space. Memory allocation happens when method is invoked 
+                                              
+
+
+
+19->                  What is final key word in java?
+                                                 
+                                               we are going to change the value of this variable, but It can't be changed because final variable once assigned a value can never be changed.
+
+
+
+                              Example:  
+public class  Test {
+	final int a=9;
+	public void run(){  
+	  a = 4;  
+	 }  
+	 public static void main(String args[]){  
+	 Test t  = new  Test();  
+	 t.run();  
+	 }  
+}
+                                       Final methods cannot be overridden
+                                       Final classes cannot be inherited to other.
+
+
+
+20->    What is Inheritance and explain about types of Inheritances in java? 
+
+
+
+                           Inheritance:   process of acquiring state and behaviour from one class to another(veriables and methods)
+                                          Inheritance is also called as "IS-A Relationship"
+                                          Inheritance is achieved by a keyword called "extends".
+
+                                          Inheritance means subclass get its own copy of members of superclass
+
+                                          only non-static members can be inherited,static members cannot be inherited rather it can be shared to other subclasses.
+                                          four types of inheritance:
+                     
+                                          1.single-level inheritance
+                                          2.multi-level inheritance
+                                          3.Hierarchcial inheritance
+                                          4.Multiple inheritance
+                                          5.Hybrid inheritance
+
+
+                             Multiple inheritance is not possible in java using by different classess because of "Diamond problem" i.e Ambiguity in constructor chaining and  "ambiguity in execution of method implementation".
+                             
+
+
+21->                    palindrome or not:             Example
+       public class  Palindrome{
+	
+	public static void main(String args[])
+	   {
+	      String rev = "";
+	      Scanner sc = new Scanner(System.in);
+	 
+	      System.out.println(" Enter a string... "  );
+	      String str = sc.nextLine();
+	 
+	      
+	 
+	      for ( int i = str.length() - 1; i >= 0; i-- )
+	         rev = rev + str.charAt(i);
+	 
+	      if (str.equals(rev)) {
+	         System.out.println(str+" is a palindrome");
+	      }
+	      else {
+	         System.out.println(str+" is not a palindrome");
+	      }
+	 
+	   }
+}
+
+
+
+
+25->             Fcatorial of a given number:
+public class Factorial{
+	
+	public static void main(String args[]){
+	   
+	      Scanner scanner = new Scanner(System.in);
+	      System.out.println("Enter the number ");
+	    
+	      int num = scanner.nextInt();
+	    
+	      int factorial = fact(num);
+	      System.out.println("Factorial of a given number is "+factorial);
+	   }
+	   static int fact(int n)
+	   {
+	       int output;
+	       if(n==1){
+	         return 1;
+	       }
+	       output = fact(n-1)* n;
+	       return output;
+	   }
+}    
+              
+
+
+
+
+
+24->              Emailid
+          public class MaskedMailid{
+	
+	    static String printMaskedMail(String mail) {
+	        StringBuffer sb = new StringBuffer(mail);
+	        String result = "";
+	        int count = mail.indexOf("@");
+	        for (int i = 2; i < count; i++) {
+	            sb.setCharAt(i, '*');           
+	        }       
+	        result = sb.toString();
+	        
+	        return result;
+	        
+	    }
+	 
+	    public static void main(String[] args) {
+	        System.out.println("Enter mail id ");
+	        Scanner sc = new Scanner(System.in);
+	        String mail_id = sc.next();
+	        System.out.println(printMaskedMail(mail_id));
+	 
+	    }
+	 
+}
+                                 
+
+
+
+
+23->            Palindrome
+
+
+public class OddPalindrome {
+
+ 
+
+    static boolean checkPalindrom(int number) {
+        boolean b = false;
+        int rem = 0, rev = 0, temp = number;
+        while (number > 0) {
+            rem = number % 10;
+            rev = (rev * 10) + rem;
+            number = number / 10;
+        }
+        if (temp == rev) {
+            b = true;
+        }
+        return b;
+    }
+
+ 
+
+    static boolean isOdd(int number) {
+        boolean b = false;
+        if (number % 2 != 0) {
+            b = true;
+        }
+        return b;
+    }
+
+ 
+
+    static String rangePalindrom(int start_value, int end_value) {
+        String res="";
+        for (int i = start_value; i <= end_value; i++) {
+            if (checkPalindrom(i) == true && isOdd(i) == true) {
+                res += i + " ";
+            }
+        }
+        return res;
+    }
+
+ 
+
+    public static void main(String[] args) {
+        System.out.println("Enter Range");
+        Scanner sc = new Scanner(System.in);
+        int start_value = sc.nextInt();
+        int end_value = sc.nextInt();
+        System.out.println(rangePalindrom(start_value, end_value));
+    }                                       
+
+
+
+
+
+
+22->           Quadratic sequence
+
+
+
+
+
+public class QuadraticSequence {
+  public static void main(String[] args) {
+        int count=1,sum=0;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the num");
+        int num=sc.nextInt();
+        for(int i=1;i<=5;i++){
+            sum = i * (i + 1) / 2;
+            System.out.println(sum);
+        }    
+    
+    }
+                                   
+
+
+
+

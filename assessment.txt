@@ -1,0 +1,309 @@
+1->  1,5
+2->  compilation problem (cannot convert from integer to string)
+3->  5
+4->  Value of b is : 30
+     Value of b is : 20
+
+5->  3
+6->  3
+7->  5
+8->  2
+9->  1
+10-> 2
+11->  1
+12->  3
+13-> 1
+14-> 2
+
+
+
+15->
+
+
+public class PrimeNum {
+	public static void main(String[] args) {
+
+	    int num = 7;
+	    boolean flag = false;
+	    for (int i = 2; i <= num / 2; ++i) {
+	      if (num % i == 0) {
+	        flag = true;
+	        break;
+	      }
+	    }
+
+	    if (!flag)
+	      System.out.println(num + " is a prime number");
+	    else
+	      System.out.println(num + " is not a prime number ");
+	  }
+	}
+
+16->
+
+              Object : an entity that has state and behaviour is known as object. everything is an object because an object consists of three states
+                  1.state: it converts the given data as attributes of an object or value
+                  2.Behaviour: it converts given data into some operations like methods in a class
+                  3.identity: it represents unique identity of an object
+          examples: chair, book,laptop
+              -> it is an instance of a class
+
+
+             class:   class is a blueprint, it is user defined data type, class having group of objects.
+                      class is logical entity
+                      class consists of attributes,methods ,interfaces and constructor blocks.
+
+
+17->    Constructor: constructor is a type of method which gets executed every time an object is created
+                     constructors are invoked by new operator.
+                     it is calling in a program when instance is created to a class
+                     constructors are of 2 types
+                       1.default constructor
+                       2.parameterised constructor
+
+                 1.default constructor-> a contructor with out having any arguments is called default constructor.
+                example:    
+                           public class Book{
+	
+                                Book(){
+	
+	                  System.out.println("Book is good");
+	                     }  
+
+                        public static void main(String args[]){  
+                          Book b=new Book();  
+                           }  
+	                }
+
+                   2.Parameterised constructor:  a constructor having more number parameters is called parameterised constructor
+
+                   Example:
+                             public class Book{
+	
+	                            int id;  
+                               String name;  
+     
+                                 Book(int id,String name){  
+                                 this.id = id;  
+                                 this.name = name;  
+                                 }  
+    
+                              public void display(){
+                              System.out.println(id+" "+name);
+                              }  
+   
+                             public static void main(String args[]){  
+  
+    	                          Book b1 = new Book(1,"anu");  
+    	                          Book b2 = new Book(2,"rashi");  
+    
+                                      b1.display();  
+                                      b2.display();  
+                                    }  
+	                      }
+
+
+18->       ClassPath and Path:
+                                   
+
+                           Path:path variable is used to set the path for all Java software tools like javac.exe, java.exe, javadoc.exe, and so on.
+
+                            C:\javac TestClass.java
+                           otherwise you write complete path
+
+                          ClassPath:  Classpath is system environment variable used by the Java compiler and JVM.
+                                     Java compiler and JVM is used Classpath to determine the location of required class files.
+  
+
+                            C:\Program Files\Java\jdk1.6.0\bin
+
+
+19->       EvenNumbers in a array:
+                              
+                               public class EvenNums{
+	
+	                         public static void main(String args[]) {
+		                Scanner sc = new Scanner(System.in);
+
+		               System.out.println("enter the size");
+		               int a = sc.nextInt();
+
+		               int arr[] = new int[a];
+
+		             for (int i = 0; i <arr.length; i++) {
+		                arr[i] = sc.nextInt();
+		              }
+		            for (int i = 0; i<arr.length; i++) {
+		               if (arr[i] % 2 == 0){
+		              System.out.println("even numbers are..");
+                                  }
+		                   else{
+		             System.out.println("odd numbers are...");
+                               }
+		                        }
+	                         }
+                             }
+
+                           
+20->               Accepting name:
+                                     
+                                      public class ReverseOrder{
+	
+	                               public static void main(String args[])
+	                               {
+	                                  String  rev = "";
+	                                Scanner scn = new Scanner(System.in);
+
+	                                  System.out.println("Enter a string to reverse");
+	                                  rev = scn.nextLine();
+
+	                               int length = rev.length();
+
+	                         for (int i = length - 1 ; i >= 0 ; i--)
+	                             rev = rev + rev.charAt(i);
+
+	                            System.out.println("Reverse of the string is.. " + rev);
+	                                }
+                                       }
+
+
+21->    Biggest Element:
+                                 
+                             
+                             public class BiggestElement{
+	
+	                      static void findLargestElement(int [] a){
+                               if(a.length  == 0) {
+                                 return;
+                                }
+                            int large = a[0];
+
+                            for (int i = 1; i <a.length ; i++) {
+                             if(a[i]>large)
+                             large = a[i];
+                                }
+                            System.out.println("Largest element in arrayis... " + large);
+                              }
+                          public static void main(String[] args) {
+                          int [] a = {1, 5, 3, 9, 2, 8, 2};
+                         findLargestElement(a);
+                          }
+                         }
+
+
+22->                 Vowels:   
+
+
+
+                                               public class Vowels{
+	
+	                                 public static void main(String[] args) throws IOException{
+		                          String str = "anusha is a good girl";
+		                             char[] c = str.toCharArray();
+		  
+		                          int count = 0;
+		  
+		                  for (int i = 0; i < str.length(); i++){
+		                        if (str.charAt(i) == 'a' || str.charAt(i) == 'e'
+		                || str.charAt(i) == 'i'
+		                || str.charAt(i) == 'o'
+		                || str.charAt(i) == 'u')
+		                {
+		                count++;
+		            }
+		        }
+		        System.out.println("Total no of vowels in string are " + count);
+		    }
+                }
+
+
+
+ 
+23->                Strong number:
+
+
+
+               public class StrongNumber{
+
+	public static void main(String[] args) {
+		int n,i;
+		int fact,lastdig;
+		Scanner scn = new Scanner(System.in);
+		System.out.print("enter the number  " );
+		n = scn.nextInt();
+		int total = 0;
+		int temp = n;
+		while(n != 0)
+		{
+		i = 1;
+		fact = 1;
+		lastdig = n % 10;
+		while(i <= lastdig)
+		{
+		fact = fact * i;
+		i++;
+		}
+		total = total + fact ;
+		n = n / 10;
+		}
+		if(total == temp)
+		System.out.println(temp + " is a strong number");
+		else
+		System.out.println(temp + " is not a strong number");
+		
+		}
+}
+
+
+
+
+
+24->              SumOfArrayElements
+
+        public class SumOfElements{
+	public static void main(String[] args) { 
+		int sum = 0;
+		Scanner scn = new Scanner(System.in);
+	 
+		System.out.print("  enter Number of elements in an array  ");
+		int Size = scn.nextInt();	
+		
+		int [] a = new int[Size];
+		
+		System.out.print("  enter " + Size + " elements of an Array ");
+		for (int i = 0; i < a.length; i++)
+		{
+			a[i] = scn.nextInt();
+		}   
+
+		for(int i = 0; i < Size; i++)
+		{
+		 sum = sum + a[i]; 
+		}		
+		System.out.println("Sum of  Elements in  Array is..  " +sum);
+	}
+}
+
+
+
+
+
+
+25->      Encrypt the Given name
+
+
+
+
+
+              
+
+
+
+
+
+                    
+                             
+
+
+
+ 
